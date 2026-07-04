@@ -23,3 +23,4 @@ models/*confusion_matrix*.png
 # Optional local data files that are not required for the app to run
 # Keep the real datasets and model files tracked if needed.
 data/contact_messages.json
+data/datasets/
