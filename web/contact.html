@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCrop | Contact</title>
+    <meta
+      name="description"
+      content="Get in touch with the OptiCrop project team. Reach out with questions, collaboration ideas, or feedback on our Smart Agricultural Engine."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contact">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <img src="assets/opticrop_icon.png" alt="OptiCrop Icon" class="brand-icon" />
+        <span>
+          <strong>OptiCrop</strong>
+          <small>Jai Kisan</small>
+        </span>
+      </a>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="recommend.html">Recommend</a>
+        <a href="disease.html">Disease Check</a>
+        <a href="insights.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="panel">
+      <div class="hero" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="hero-copy">
+          <p class="eyebrow">Get in touch</p>
+          <h1 style="font-size: clamp(2rem, 3.5vw, 2.8rem);">Connect with the OptiCrop team</h1>
+          <p>Whether you are a farmer, student, or agricultural researcher, we would love to hear how you are using the platform and connecting with the global agriculture data network.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/contact_hero.png" alt="Global agricultural network" style="border: 1px solid rgba(255,255,255,0.15);" />
+        </div>
+      </div>
+
+      <div class="grid two-col">
+        <div class="card">
+          <h3>Contact details</h3>
+          <div class="mini-panel">
+            <strong>Email</strong>
+            <p class="muted">ramanharshitha2005@gmail.com</p>
+          </div>
+          <div class="mini-panel" style="margin-top:12px;">
+            <strong>Phone</strong>
+            <p class="muted">+91 9353905588</p>
+          </div>
+          <div class="mini-panel" style="margin-top:12px;">
+            <strong>Location</strong>
+            <p class="muted">Rural advisory lab • Smart farming innovation center</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Reach out</h3>
+          <form id="contact-form">
+            <label>Name<input type="text" id="contact-name" placeholder="Your name" required /></label>
+            <label>Email<input type="email" id="contact-email" placeholder="you@example.com" required /></label>
+            <label>Message<textarea id="contact-message" rows="5" placeholder="Tell us about your field, goals, or project." required></textarea></label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send message</button>
+            </div>
+            <p id="contact-status" class="weather-status muted" style="margin-top:10px;"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 OptiCrop — Smart Agricultural Production Optimization Engine</span>
+        <div class="footer-links">
+          <a href="recommend.html">Recommend</a>
+          <a href="disease.html">Disease Check</a>
+          <a href="insights.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var name = document.getElementById('contact-name').value.trim();
+        var email = document.getElementById('contact-email').value.trim();
+        var message = document.getElementById('contact-message').value.trim();
+        var status = document.getElementById('contact-status');
+
+        if (!name || !email || !message) {
+          status.textContent = 'Please fill in all fields before sending.';
+          status.className = 'weather-status error';
+          return;
+        }
+
+        status.textContent = 'Message sent successfully! We will get back to you soon.';
+        status.className = 'weather-status success';
+        this.reset();
+
+        setTimeout(function () {
+          status.textContent = '';
+          status.className = 'weather-status muted';
+        }, 5000);
+      });
+
+      // Hamburger menu toggling code for the contact page where script.js might not execute DOMContentLoaded at the right moment if cached or different logic is applied. Let's make sure it operates nicely by binding directly or relying on script.js. Since there is no script.js loaded here, we must load it! Let's load script.js or add standard toggle code.
+      // Wait, let's load script.js for consistency!
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

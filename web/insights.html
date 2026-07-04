@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCrop | Research &amp; Policy Planning Insights</title>
+    <meta
+      name="description"
+      content="Explore crop suitability patterns, climate correlations, and NPK distribution datasets using the OptiCrop interactive research analytics dashboard."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body data-page="insights">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <img src="assets/opticrop_icon.png" alt="OptiCrop Icon" class="brand-icon" />
+        <span>
+          <strong>OptiCrop</strong>
+          <small>Jai Kisan</small>
+        </span>
+      </a>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="recommend.html">Recommend</a>
+        <a href="disease.html">Disease Check</a>
+        <a href="insights.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="panel">
+      <div class="hero" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="hero-copy">
+          <p class="eyebrow">Scenario 3: Agricultural Research &amp; Policy Workspace</p>
+          <h1 style="font-size: clamp(2rem, 3.5vw, 2.8rem);">Interactive crop-environment analytics dashboard</h1>
+          <p>Explore patterns across crops, regions, and seasons. Filter data, compare nutrient profiles, and export findings for policy planning and evidence-based strategy design.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/insights_hero.png" alt="Interactive farm data dashboard" style="border: 1px solid rgba(255,255,255,0.15);" />
+        </div>
+      </div>
+
+      <div class="dashboard-toolbar card" style="margin-bottom: 20px;">
+        <div class="field-grid">
+          <label>Filter by crop<select id="filter-crop"><option value="">All crops</option></select></label>
+          <label>Filter by region<select id="filter-location"><option value="">All regions</option></select></label>
+          <label>Filter by season<select id="filter-season"><option value="">All seasons</option></select></label>
+        </div>
+        <div class="form-actions">
+          <button class="btn secondary" type="button" id="reset-filters">Reset filters</button>
+          <button class="btn primary" type="button" id="export-csv">Export filtered CSV</button>
+        </div>
+      </div>
+
+      <div id="analytics-stats" class="grid three-col" style="margin:20px 0;"></div>
+
+      <div class="grid two-col">
+        <div class="card chart-card">
+          <h3>Average NPK by crop</h3>
+          <canvas id="npk-chart" height="220" aria-label="Average Nitrogen, Phosphorous, and Potassium levels by crop" role="img"></canvas>
+        </div>
+        <div class="card chart-card">
+          <h3>Crop distribution in dataset</h3>
+          <canvas id="crop-dist-chart" height="220" aria-label="Percentage distribution of crop records in dataset" role="img"></canvas>
+        </div>
+      </div>
+
+      <div class="grid two-col" style="margin-top:20px;">
+        <div class="card chart-card">
+          <h3>Climate scatter (temperature vs humidity)</h3>
+          <canvas id="climate-chart" height="240" aria-label="Scatter plot of temperature versus humidity" role="img"></canvas>
+        </div>
+        <div class="card chart-card">
+          <h3>Rainfall by region</h3>
+          <canvas id="rainfall-chart" height="240" aria-label="Average rainfall by region bar chart" role="img"></canvas>
+        </div>
+      </div>
+
+      <div class="grid two-col" style="margin-top:20px;">
+        <div class="card">
+          <h3>Regional overview</h3>
+          <div id="location-table" class="matrix"></div>
+        </div>
+        <div class="card">
+          <h3>Seasonal overview</h3>
+          <div id="season-table" class="matrix"></div>
+        </div>
+      </div>
+
+      <div id="insight-panel" class="grid three-col" style="margin-top:20px;"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 OptiCrop — Smart Agricultural Production Optimization Engine</span>
+        <div class="footer-links">
+          <a href="recommend.html">Recommend</a>
+          <a href="disease.html">Disease Check</a>
+          <a href="insights.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

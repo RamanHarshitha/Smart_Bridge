@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCrop | Smart Agricultural Production Optimization Engine</title>
+    <meta
+      name="description"
+      content="OptiCrop is a Smart Agricultural Production Optimization Engine that uses data-driven insights to optimize agricultural production. It integrates N, P, K levels, temperature, humidity, pH, and rainfall to provide intelligent recommendations for maximizing yields and resource efficiency."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <img src="assets/opticrop_icon.png" alt="OptiCrop Icon" class="brand-icon" />
+        <span>
+          <strong>OptiCrop</strong>
+          <small>Jai Kisan</small>
+        </span>
+      </a>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="recommend.html">Recommend</a>
+        <a href="disease.html">Disease Check</a>
+        <a href="insights.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-top: 0;">
+        <div class="hero-copy" style="margin-top: -20px;">
+          <p class="eyebrow">Smart Agricultural Production Optimization Engine</p>
+          <h1>Turn soil, weather &amp; crop data into real-time farm decisions.</h1>
+          <p>
+            OptiCrop utilizes data-driven insights to optimize agricultural production by integrating key environmental factors — Nitrogen (N), Phosphorous (P), Potassium (K), soil temperature, humidity, pH, and rainfall — to provide intelligent recommendations for maximizing yields and resource efficiency.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="recommend.html">Try crop recommendation</a>
+            <a class="btn secondary" href="disease.html">Check crop diseases</a>
+          </div>
+          <ul class="hero-highlights">
+            <li>Dataset-backed crop and disease logic</li>
+            <li>Recommendations built from N, P, K, pH, temperature, humidity &amp; rainfall</li>
+            <li>Fertilizer guidance and field-ready action plans</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" style="margin-top: 40px;">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80" alt="Farmer in a green field" />
+          <div class="hero-card">
+            <h2>Live farm intelligence snapshot</h2>
+            <div class="stat-grid">
+              <div>
+                <strong>15+</strong>
+                <span>crop profiles</span>
+              </div>
+              <div>
+                <strong>8</strong>
+                <span>disease scenarios</span>
+              </div>
+              <div>
+                <strong>95%</strong>
+                <span>planning confidence</span>
+              </div>
+            </div>
+            <div class="mini-panel">
+              <h3>Why it matters</h3>
+              <p>Farmers can optimize input use while researchers compare climate and crop patterns with stronger evidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <p class="eyebrow">Three core scenarios</p>
+          <h2>How OptiCrop powers smarter agriculture</h2>
+          <p>The platform supports three key use-cases designed for farmers, agronomists, researchers, and policymakers.</p>
+        </div>
+        <div class="grid three-col">
+          <article class="card scenario-card">
+            <p class="eyebrow">Scenario 1</p>
+            <h3>Smart Crop Recommendation for Farmers</h3>
+            <p>A farmer enters soil and environmental details such as N, P, K, temperature, humidity, pH level, and rainfall. The system analyzes the data and recommends the most suitable crop for maximum yield and farming efficiency.</p>
+            <ul>
+              <li>Multi-model ML ensemble prediction</li>
+              <li>Live weather auto-fill via GPS or city</li>
+              <li>Fertilizer guidance &amp; action plans</li>
+            </ul>
+            <div class="form-actions">
+              <a class="btn primary" href="recommend.html">Try it →</a>
+            </div>
+          </article>
+          <article class="card scenario-card">
+            <p class="eyebrow">Scenario 2</p>
+            <h3>Crop Suitability &amp; Environmental Assessment</h3>
+            <p>A user wants to understand whether current soil and climate conditions are suitable for a particular crop. The application evaluates input parameters and provides insights about crop compatibility, environmental suitability, and productivity potential.</p>
+            <ul>
+              <li>Factor-by-factor compatibility scoring</li>
+              <li>Remediation &amp; fertilizer guidance</li>
+              <li>Region and season aware profiles</li>
+            </ul>
+            <div class="form-actions">
+              <a class="btn secondary" href="recommend.html">Evaluate crop →</a>
+            </div>
+          </article>
+          <article class="card scenario-card">
+            <p class="eyebrow">Scenario 3</p>
+            <h3>Agricultural Research &amp; Policy Planning</h3>
+            <p>An agricultural researcher or policymaker uses the system to analyze crop-environment relationships and identify patterns. The platform helps make data-driven decisions for sustainable farming strategies and resource optimization.</p>
+            <ul>
+              <li>NPK &amp; climate visualizations</li>
+              <li>Regional and seasonal comparisons</li>
+              <li>Policy-ready CSV data exports</li>
+            </ul>
+            <div class="form-actions">
+              <a class="btn secondary" href="insights.html">Explore data →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel showcase-card">
+        <div class="card split-card">
+          <div>
+            <p class="eyebrow">About OptiCrop</p>
+            <h2>Built for farmers, agronomists, researchers &amp; policymakers.</h2>
+            <p>The OptiCrop project revolutionizes agricultural practices by providing a smart production optimization engine. By integrating key environmental factors and crop-specific recommendations, OptiCrop enables farmers to achieve optimal yields, improve resource efficiency, and contribute to sustainable agricultural practices.</p>
+            <p class="muted" style="margin-top:12px;">The knowledge and insights gained through OptiCrop can be utilized by agricultural researchers, policymakers, and stakeholders to advance the understanding of crop-environment interactions and inform the development of evidence-based agricultural strategies.</p>
+          </div>
+          <div class="image-stack">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Agricultural landscape" />
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80" alt="Farmer inspecting crops" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 OptiCrop — Smart Agricultural Production Optimization Engine</span>
+        <div class="footer-links">
+          <a href="recommend.html">Recommend</a>
+          <a href="disease.html">Disease Check</a>
+          <a href="insights.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

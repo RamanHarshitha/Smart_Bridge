@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCrop | Crop Recommendation &amp; Suitability</title>
+    <meta
+      name="description"
+      content="Evaluate crop suitability and get smart, data-driven crop recommendations based on Nitrogen, Phosphorous, Potassium, temperature, humidity, pH, and rainfall."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="recommend">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <img src="assets/opticrop_icon.png" alt="OptiCrop Icon" class="brand-icon" />
+        <span>
+          <strong>OptiCrop</strong>
+          <small>Jai Kisan</small>
+        </span>
+      </a>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="recommend.html">Recommend</a>
+        <a href="disease.html">Disease Check</a>
+        <a href="insights.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="panel">
+      <div class="hero" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="hero-copy">
+          <p class="eyebrow">Scenario 1 &amp; Scenario 2</p>
+          <h1 style="font-size: clamp(2rem, 3.5vw, 2.8rem);">Smart Crop Recommendation &amp; Suitability</h1>
+          <p>Enter soil and climate measurements, optionally fetch live weather via GPS or city name, and assess crop suitability or recommend the best matching crop to maximize your yield.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/farmer_hero.png" alt="Farmer using OptiCrop in field" style="border: 1px solid rgba(255,255,255,0.15);" />
+        </div>
+      </div>
+
+      <div class="mode-tabs" role="tablist">
+        <button type="button" class="mode-tab active" data-mode="recommend" role="tab">Scenario 1: Recommend best crop</button>
+        <button type="button" class="mode-tab" data-mode="evaluate" role="tab">Scenario 2: Evaluate my chosen crop</button>
+      </div>
+
+      <div class="grid two-col">
+        <form id="crop-form" class="card form-card">
+          <div class="mini-panel weather-panel">
+            <h3>Live weather integration</h3>
+            <p class="muted">Auto-fill temperature, humidity, and recent rainfall from your current location or a specific city.</p>
+            <div class="field-grid">
+              <label>City / region<input type="text" name="city" id="city-input" placeholder="e.g. Pune, Delhi, Mumbai" /></label>
+              <label>Or use GPS<button type="button" class="btn secondary" id="gps-btn" style="margin-top:0; width: 100%;">Use my location</button></label>
+            </div>
+            <div class="form-actions" style="margin-top:14px;">
+              <button class="btn secondary" type="button" id="weather-btn">Fetch live weather</button>
+            </div>
+            <p id="weather-status" class="weather-status muted">Weather not loaded yet.</p>
+          </div>
+
+          <div class="field-grid">
+            <label>Region<select name="location" id="location-select"><option value="">Any region</option></select></label>
+            <label>Season<select name="season" id="season-select"><option value="">Any season</option></select></label>
+            <label class="evaluate-only hidden">Crop to evaluate<select name="target_crop" id="target-crop-select"></select></label>
+            <label>Nitrogen (N)<input type="number" name="nitrogen" value="110" min="0" max="250" required /></label>
+            <label>Phosphorous (P)<input type="number" name="phosphorous" value="55" min="0" max="250" required /></label>
+            <label>Potassium (K)<input type="number" name="potassium" value="70" min="0" max="250" required /></label>
+            <label>Temperature (°C)<input type="number" name="temperature" value="26" min="0" max="60" required /></label>
+            <label>Humidity (%)<input type="number" name="humidity" value="72" min="0" max="100" required /></label>
+            <label>Soil pH<input type="number" name="ph" value="6.4" step="0.1" min="0" max="14" required /></label>
+            <label>Rainfall (mm)<input type="number" name="rainfall" value="95" min="0" max="400" required /></label>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit" id="submit-btn">Analyze field conditions</button>
+            <button class="btn secondary" type="button" id="sample-btn">Load sample values</button>
+          </div>
+        </form>
+
+        <div id="result-card" class="card result-card">
+          <h3>Recommendation output</h3>
+          <div class="placeholder">Use the form to get a ranked crop recommendation.</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 OptiCrop — Smart Agricultural Production Optimization Engine</span>
+        <div class="footer-links">
+          <a href="recommend.html">Recommend</a>
+          <a href="disease.html">Disease Check</a>
+          <a href="insights.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local runtime / generated files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Project-specific generated artifacts
+models/*confusion_matrix*.png
+
+# Optional local data files that are not required for the app to run
+# Keep the real datasets and model files tracked if needed.
+data/contact_messages.json
